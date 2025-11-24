@@ -1,81 +1,83 @@
 # Go Image Scraper
 
-A simple Go project that scrapes all images from any website and downloads them into an `images/` folder.  
-This project is perfect for beginners learning Go, HTTP requests, file handling, and HTML parsing.
-
----
+  A simple Go project that scrapes all images from any website and downloads them into an images/ folder.
+  Perfect for beginners learning Go, HTTP requests, file handling, and HTML parsing.
 
 ## 🚀 Features
 
-- Fetches any webpage using `http.Get`
-- Parses HTML using **goquery**
-- Extracts all `<img>` tags
-- Automatically fixes image URLs (relative, protocol missing, etc.)
-- Downloads all images locally with unique filenames
-- Simple, clean, beginner-friendly Go code
+Fetches any webpage using http.Get
 
----
+Parses HTML using goquery
+
+Extracts all <img> tags
+
+Automatically fixes relative or missing-protocol image URLs
+
+Downloads images with unique filenames
+
+Clean, beginner-friendly Go code
 
 ## 📦 Requirements
 
-Before running the project, install dependencies:
+Install the dependencies:
 
-```bash
 go mod tidy
+
 This installs goquery and other required packages.
 
-▶️ How to Run
+## ▶️ How to Run
+
 go run main.go
 
-
-Then enter any website URL, for example:
+Enter any website URL, for example:
 
 https://example.com
 
-
 All images will be downloaded into the images/ folder automatically.
 
-📁 Project Structure
+## 📁 Project Structure
+
 go-image-scraper/
 │── main.go
 │── go.mod
 │── go.sum
 │── README.md
-└── images/          # Downloaded images (ignored by Git)
+└── images/ # Downloaded images (ignored by Git)
 
-🧠 How It Works (Quick Explanation)
+## 🧠 How It Works
 
-The user types a website URL.
+##### You enter a website URL.
 
 The program sends an HTTP GET request.
 
-goquery parses the HTML.
+goquery parses the page’s HTML.
 
-All <img> tags are found.
+All <img> tags are extracted.
 
-Each image URL is cleaned and normalized.
+URLs are normalized (absolute, fixed protocol, etc.).
 
-The file is downloaded with a unique filename such as img_0.jpg, img_1.png, etc.
+Images are downloaded as:
+img_0.jpg, img_1.png, img_2.jpeg, ...
 
-All files are saved inside /images.
+Every file is saved inside images/.
 
-⚙️ Technologies Used
+## ⚙️ Technologies Used
 
-Go
+##### Go
 
-goquery (github.com/PuerkitoBio/goquery)
+##### goquery (github.com/PuerkitoBio/goquery)
 
-Standard packages: fmt, net/http, os, io, strings
+##### Standard libraries: fmt, net/http, os, io, strings
 
-📝 License
+## 📝 License
 
-MIT License — feel free to use, modify, and improve the project.
+MIT License — free to use, modify, and improve.
 
-🤝 Contributing
+## 🤝 Contributing
 
 Pull requests are welcome!
-If you want to add new features (concurrency, better URL parsing, duplicate checking), feel free to contribute.
+If you want to add features like concurrency, duplicate checking, or better URL handling, feel free to contribute.
 
-⭐ Show Support
+## ⭐ Show Support
 
-If you like the project, consider giving the repository a star ⭐ on GitHub!
+If you like this project, give it a ⭐ on GitHub!
